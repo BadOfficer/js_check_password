@@ -62,4 +62,8 @@ describe(`Function 'checkPassword':`, () => {
   it(`should return 'false' for 'Str@ng'`, () => {
     expect(checkPassword('Str@ng')).toBe(false);
   });
+
+  it(`should return 'true' for 'Password1!'`, () => {
+    expect(checkPassword('Password1!')).toBe(true);
+  });
 });
