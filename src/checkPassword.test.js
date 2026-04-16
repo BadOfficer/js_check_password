@@ -14,7 +14,7 @@ describe(`Function 'checkPassword':`, () => {
   });
 
   it(`should return 'true' for the valid password with 8 characters`, () => {
-    const result = checkPassword('Password1!');
+    const result = checkPassword('Passwo1!');
 
     expect(result).toBe(true);
   });
@@ -53,5 +53,13 @@ describe(`Function 'checkPassword':`, () => {
     const result = checkPassword('str@nga123');
 
     expect(result).toBe(false);
+  });
+
+  it(`should return 'false' for 'qwerty'`, () => {
+    expect(checkPassword('qwerty')).toBe(false);
+  });
+
+  it(`should return 'false' for 'Str@ng'`, () => {
+    expect(checkPassword('Str@ng')).toBe(false);
   });
 });
